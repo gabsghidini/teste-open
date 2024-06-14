@@ -16,10 +16,16 @@ const Footer: React.FC = () => {
 						<S.Image src="/images/OPEN-Solutions.png" alt="Logo" />
 						<S.Subtitle>{i18n("followUs")}</S.Subtitle>
 						<S.FlagContainer>
-							<Link href="https://www.instagram.com/opensolutions.sistema/">
+							<Link
+								href="https://www.instagram.com/opensolutions.sistema/"
+								target="_blank"
+							>
 								<S.Instagram />
 							</Link>
-							<Link href="https://www.linkedin.com/company/open-solutions-br/">
+							<Link
+								href="https://www.linkedin.com/company/open-solutions-br/"
+								target="_blank"
+							>
 								<S.LinkedIn />
 							</Link>
 						</S.FlagContainer>

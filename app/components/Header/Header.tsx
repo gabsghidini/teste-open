@@ -53,10 +53,16 @@ const Header = () => {
 					</S.NavLink>
 				</S.Nav>
 				<S.FlagContainer>
-					<Link href="https://www.instagram.com/opensolutions.sistema/">
+					<Link
+						href="https://www.instagram.com/opensolutions.sistema/"
+						target="_blank"
+					>
 						<S.Instagram />
 					</Link>
-					<Link href="https://www.linkedin.com/company/open-solutions-br/">
+					<Link
+						href="https://www.linkedin.com/company/open-solutions-br/"
+						target="_blank"
+					>
 						<S.LinkedIn />
 					</Link>
 					<Link href={pathname} locale="pt-br">
