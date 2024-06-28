@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
-	background-color: #fff;
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		background-color: #fff;
+	}
 `;
 
 export const Container = styled.div`
@@ -29,17 +33,26 @@ export const InfoContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	flex: 1;
-	padding: 1rem;
 	text-align: left;
 	height: 80%;
+
+	@media screen and (min-width: 768px) {
+		padding: 1rem;
+		flex: 2;
+	}
 `;
 
 export const Video = styled.video`
 	width: 100%;
 	height: auto;
 	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		display: flex;
+		height: 400px;
+	}
 `;
 
 export const Title = styled.h2`

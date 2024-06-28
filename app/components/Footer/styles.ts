@@ -34,6 +34,10 @@ export const FooterColumnLeft = styled.div`
 	padding: 1rem;
 	flex: 1;
 	gap: 1rem;
+
+	@media screen and (max-width: 768px) {
+		align-items: center;
+	}
 `;
 
 export const Image = styled.img`
@@ -50,6 +54,10 @@ export const Subtitle = styled.h3`
 	text-align: center;
 	font-weight: 500;
 	margin-bottom: 1rem;
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75rem;
+	}
 `;
 
 export const Instagram = styled(IoLogoInstagram)`
@@ -80,6 +88,10 @@ export const ColumnHeader = styled.h6`
 	font-size: 1.25rem;
 	text-align: center;
 	font-weight: 600;
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75rem;
+	}
 `;
 
 export const Text = styled.p`
@@ -87,12 +99,20 @@ export const Text = styled.p`
 	font-size: 1rem;
 	text-align: center;
 	font-weight: 500;
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75rem;
+	}
 `;
 
 export const TextLeft = styled.p`
 	color: white;
 	font-size: 1rem;
 	font-weight: 500;
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75rem;
+	}
 `;
 
 export const TextContainer = styled.div`
@@ -118,6 +138,11 @@ export const DemoButton = styled.button`
 	font-weight: 400;
 	padding: 1rem 2rem;
 	border-radius: 0.25rem;
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75rem;
+		padding: 0.5rem 1rem;
+	}
 `;
 
 export const CopyrightContainer = styled.div`

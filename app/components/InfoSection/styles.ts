@@ -29,6 +29,10 @@ export const Title = styled.h1`
 	color: white;
 	margin-bottom: 1.5rem;
 	font-size: 1.5rem;
+
+	@media screen and (min-width: 768px) {
+		font-size: 1rem;
+	}
 `;
 
 export const Highlight = styled.span`
@@ -61,6 +65,7 @@ export const Card = styled.div`
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	height: 10rem;
 	width: 20%;
+	min-width: 10rem;
 	max-width: 12.5rem;
 
 	&:hover {

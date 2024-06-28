@@ -4,36 +4,50 @@ export const Section = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
 	background-color: #d6d4d0;
 `;
 
-export const SubSection = styled.div`
+export const SubSection = styled.span`
 	display: flex;
 	flex-wrap: nowrap;
+	height: 375px;
 	max-width: 1200px;
-	height: 25rem;
+	width: auto;
 	background-color: #fff;
-	border-radius: 0.5rem;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	padding: 0;
 	margin: 0;
+	padding: 1rem;
+	flex-direction: column;
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		height: 25rem;
+		padding: 2rem;
+		margin: 2rem;
+	}
 `;
 
 export const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	flex: 2;
-	padding: 4rem;
-	margin-right: 1rem;
+	justify-content: space-between;
+
+	@media screen and (min-width: 768px) {
+		flex: 2;
+	}
 `;
 
 export const ImageContainer = styled.div`
-	flex: 1;
 	text-align: center;
 	padding: 0;
 	margin: 0;
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex: 1;
+	}
 `;
 
 export const Image = styled.img`

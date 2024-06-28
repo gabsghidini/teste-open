@@ -5,12 +5,14 @@ export const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	max-width: 1200px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 2rem;
+	background: #5d9abc;
 `;
 
 export const CarouselWrapper = styled.div`
+	width: 100%;
 	max-width: 1200px;
 
 	.slick-slide img {
@@ -40,6 +42,11 @@ export const Description = styled.p`
 	font-size: 1.125rem;
 	font-weight: bold;
 	color: #333;
+	margin-bottom: 2rem;
+
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
 `;
 
 export const BlueBar = styled.div`
@@ -53,6 +60,10 @@ export const BlueBar = styled.div`
 	justify-content: center;
 	font-size: 2rem;
 	font-weight: bold;
+
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
 `;
 
 export const WhiteBar = styled.div`
