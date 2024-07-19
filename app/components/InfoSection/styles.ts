@@ -21,17 +21,20 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
-	max-width: 1200px;
+	max-width: 75rem;
 	margin: 0 auto;
+	padding: 0 1rem;
 `;
 
 export const Title = styled.h1`
 	color: white;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1.9rem;
 	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 2rem;
 
 	@media screen and (min-width: 768px) {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 `;
 
@@ -44,7 +47,7 @@ export const Grid = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	max-width: 1200px;
+	max-width: 75rem;
 	gap: 1rem;
 `;
 
@@ -64,7 +67,7 @@ export const Card = styled.div`
 	flex-direction: column;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	height: 10rem;
-	width: 20%;
+	width: 63%;
 	min-width: 10rem;
 	max-width: 12.5rem;
 

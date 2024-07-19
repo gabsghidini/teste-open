@@ -1,4 +1,4 @@
-import { Header } from "@/app/components/Header";
+import { useRef, useState } from "react";
 import { Footer } from "@/app/components/Footer";
 import * as S from "./styles";
 import { useTranslations } from "next-intl";
@@ -7,7 +7,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formContactsSchema } from "../../schemas/contacts";
 import { Toaster, toast } from "react-hot-toast";
 
+
 import emailjs from "emailjs-com";
+import useRecaptcha from "@/app/hooks/useReCaptcha";
 
 type FormState = {
 	name: string;
@@ -20,6 +22,9 @@ type FormState = {
 const Contacts = () => {
 	const i18n = useTranslations("General");
 
+	const { captchaElement, isValidCaptcha, handleResetCaptcha, isRecaptchaCheck } = useRecaptcha();
+
+
 	const {
 		register,
 		handleSubmit,
@@ -29,14 +34,29 @@ const Contacts = () => {
 		resolver: zodResolver(formContactsSchema),
 	});
 
+
+
+
+
 	const onSubmit = async (data: FormState) => {
+
+		if (!isRecaptchaCheck) {
+			toast.error("Por favor, marque o captcha.");
+			return
+		}
+
+		if (!isValidCaptcha) {
+			toast.error("Captcha inválido.");
+			return
+		}
+	
+
 		const formData = new FormData();
 		formData.append("name", data.name);
 		formData.append("phone", data.phone);
 		formData.append("surname", data.surname);
 		formData.append("email", data.email);
 		formData.append("additionalInfo", data.additionalInfo);
-
 		try {
 			const formElement = document.querySelector("form");
 			if (formElement) {
@@ -49,6 +69,7 @@ const Contacts = () => {
 
 				if (response.status === 200) {
 					toast.success("Enviado com sucesso!");
+					handleResetCaptcha();
 					reset();
 				} else {
 					toast.error(
@@ -67,7 +88,6 @@ const Contacts = () => {
 
 	return (
 		<>
-			<Header />
 			<Toaster />
 			<S.MainContainer>
 				<S.Title>{i18n("contact")}.</S.Title>
@@ -140,6 +160,13 @@ const Contacts = () => {
 							{...register("additionalInfo")}
 						/>
 						<S.Label />
+
+						<S.FormContainer>
+							{
+								captchaElement
+							}
+
+						</S.FormContainer>
 						<S.SubmitButton>
 							{i18n("sendMyContact").toUpperCase()}
 						</S.SubmitButton>

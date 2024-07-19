@@ -9,6 +9,8 @@ export const Title = styled.h1`
 	font-size: 2.5rem;
 	margin: 20px 0;
 	color: var(--blue-500);
+	padding: 2rem;
+
 `;
 
 export const FormContainer = styled.div`
@@ -27,15 +29,28 @@ export const FormColumnContainer = styled.div`
 
 export const FormRowContainer = styled.div`
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
 	gap: 1rem;
+	padding: 1rem;
+
+
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
 `;
 
-export const FormTitle = styled.h2`
-	font-size: 1.8rem;
+export const FormTitle = styled.h5`
+	font-size: 1.25rem;
 	margin-bottom: 20px;
 	color: var(--orange-600);
+	padding: 2rem;
+
+	@media screen and (min-width: 768px) {
+		font-size: 1.5rem;
+		padding: 0;
+	}
 `;
 
 export const Form = styled.form`
@@ -43,6 +58,11 @@ export const Form = styled.form`
 	flex-direction: column;
 	align-items: flex-start;
 	padding-left: 1rem;
+	padding: 1.5rem;
+
+	@media screen and (min-width: 768px) {
+		padding: 0;
+	}
 `;
 
 export const Input = styled.input`

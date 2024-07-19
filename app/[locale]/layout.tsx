@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Global } from "../globals";
 import { notFound } from "next/navigation";
+import { Header } from "../components/Header";
 
 const locales = ["pt-br", "en", "es"];
 
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
 			<body>
 				<Global />
 				<NextIntlClientProvider messages={messages}>
+					<Header/>
 					{children}
 				</NextIntlClientProvider>
 			</body>

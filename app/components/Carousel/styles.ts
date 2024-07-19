@@ -13,14 +13,20 @@ export const Container = styled.div`
 
 export const CarouselWrapper = styled.div`
 	width: 100%;
-	max-width: 1200px;
+	max-width: 75rem;
+
+	.slick-track {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
 	.slick-slide img {
 		display: block;
 		margin: auto;
 	}
 	.slick-dots li button:before {
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 	.slick-dots li.slick-active button:before {
 		color: #000;
@@ -29,13 +35,13 @@ export const CarouselWrapper = styled.div`
 
 export const CarouselItem = styled.div`
 	text-align: center;
-	padding: 20px;
+	padding: 1.25rem;
 `;
 
 export const Logo = styled.img`
 	object-fit: cover;
 	max-width: 100%;
-	margin: 10px auto;
+	margin: 0.625rem auto;
 `;
 
 export const Description = styled.p`
@@ -51,7 +57,7 @@ export const Description = styled.p`
 
 export const BlueBar = styled.div`
 	background-color: #032f47;
-	height: 100px;
+	height: 6.25rem;
 	width: 100%;
 	color: #fff;
 
@@ -60,9 +66,11 @@ export const BlueBar = styled.div`
 	justify-content: center;
 	font-size: 2rem;
 	font-weight: bold;
-
+	
 	@media screen and (max-width: 768px) {
 		text-align: center;
+		padding: 0 2rem;
+		font-size: 1.5rem;
 	}
 `;
 
@@ -89,5 +97,6 @@ export const Button = styled.button`
 	font-size: 1rem;
 	font-weight: 600;
 
-	width: 21.875rem;
+	max-width: 21.875rem;
+	width: 80%;
 `;

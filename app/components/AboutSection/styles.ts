@@ -9,13 +9,11 @@ export const Section = styled.section`
 
 export const SubSection = styled.span`
 	display: flex;
-	flex-wrap: nowrap;
-	height: 375px;
-	max-width: 1200px;
-	width: auto;
+	max-width: 75rem;
+	width: 100%;
 	background-color: #fff;
 	margin: 0;
-	padding: 1rem;
+	padding: 2rem 3rem;
 	flex-direction: column;
 
 	@media screen and (min-width: 768px) {
@@ -23,7 +21,7 @@ export const SubSection = styled.span`
 		border-radius: 0.5rem;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		height: 25rem;
-		padding: 2rem;
+		padding: 0;
 		margin: 2rem;
 	}
 `;
@@ -35,6 +33,7 @@ export const TextContainer = styled.div`
 
 	@media screen and (min-width: 768px) {
 		flex: 2;
+		padding: 2rem;
 	}
 `;
 
@@ -67,6 +66,7 @@ export const Title = styled.h2`
 export const Description = styled.p`
 	color: #333;
 	font-size: 1.15rem;
+	line-height: 1.5;
 `;
 
 export const Button = styled.button`
@@ -79,7 +79,6 @@ export const Button = styled.button`
 	font-size: 1rem;
 	font-weight: 600;
 	margin-top: 1rem;
-	width: 21.875rem;
 `;
 
 export const OrangeBar = styled.div`

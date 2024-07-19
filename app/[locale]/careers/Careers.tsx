@@ -1,4 +1,4 @@
-import { Header } from "@/app/components/Header";
+
 import { Footer } from "@/app/components/Footer";
 import * as S from "./styles";
 import { useTranslations } from "next-intl";
@@ -7,6 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formCareersSchema } from "../../schemas/careers";
 import emailjs from "emailjs-com";
 import { Toaster, toast } from "react-hot-toast";
+import useRecaptcha from "@/app/hooks/useReCaptcha";
+import { useEffect, useState } from "react";
 
 type FormState = {
 	name: string;
@@ -20,6 +22,13 @@ type FormState = {
 
 const Careers = () => {
 	const i18n = useTranslations("General");
+	const [isClient, setIsClient] = useState(false);
+
+	useEffect(() => {
+	  setIsClient(true);
+	}, []);
+
+	const { captchaElement, isValidCaptcha, isRecaptchaCheck , handleResetCaptcha} = useRecaptcha();
 
 	const {
 		register,
@@ -30,7 +39,21 @@ const Careers = () => {
 		resolver: zodResolver(formCareersSchema),
 	});
 
+	
+
 	const onSubmit = async (data: FormState) => {
+
+
+		if (!isRecaptchaCheck) {
+			toast.error("Por favor, marque o captcha.");
+			return
+		}
+
+		if (!isValidCaptcha) {
+			toast.error("Captcha inválido.");
+			return
+		}
+
 		const formData = new FormData();
 		formData.append("name", data.name);
 		formData.append("phone", data.phone);
@@ -52,10 +75,14 @@ const Careers = () => {
 
 				if (response.status === 200) {
 					toast.success("E-mail enviado com sucesso!");
+					handleResetCaptcha();
+					
+
 					reset();
 				} else {
 					toast.error(
 						"Falha ao enviar o e-mail. Por favor, tente novamente."
+
 					);
 				}
 			} else {
@@ -70,9 +97,12 @@ const Careers = () => {
 		}
 	};
 
+	if (!isClient) {
+		return null; 
+	  }
+
 	return (
 		<>
-			<Header />
 			<Toaster />
 			<S.MainContainer>
 				<S.Title>{i18n("workAtOpen")}</S.Title>
@@ -141,6 +171,7 @@ const Careers = () => {
 									</S.ErrorMessage>
 								)}
 							</S.FormColumnContainer>
+
 						</S.FormRowContainer>
 
 						<S.Label htmlFor="email">{i18n("email")}</S.Label>
@@ -176,7 +207,12 @@ const Careers = () => {
 								{errors.message.message}
 							</S.ErrorMessage>
 						)}
+						<S.ContentCaptcha>
+							{
+								captchaElement
+							}
 
+						</S.ContentCaptcha>
 						<S.SubmitButton type="submit">
 							{i18n("sendMyResume").toUpperCase()}
 						</S.SubmitButton>

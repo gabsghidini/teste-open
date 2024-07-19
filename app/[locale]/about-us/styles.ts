@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
 	text-align: center;
+	margin-top: 4rem;
+
 `;
 
 export const Container = styled.div`
@@ -11,11 +13,14 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-	padding: 40px 20px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column-reverse;
 	align-items: center;
 	gap: 1rem;
+
+@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
 `;
 
 export const SubSection = styled.section`
@@ -23,38 +28,70 @@ export const SubSection = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
 `;
 
 export const Title = styled.h1`
 	font-size: 2.5rem;
 	color: #1d3c6e;
-	margin-bottom: 20px;
 `;
 
 export const Subtitle = styled.p`
 	font-size: 1.5rem;
 	margin-bottom: 20px;
 	color: #f37021;
+	line-height: 2rem;
+`;
+
+export const BgImage = styled.div`
+	background-image: url("/images/predio.png");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	padding: 3rem 0;
+    min-height: 573px;
+	border-radius: 8px;
+	 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	@media screen and (min-width: 768px) {
+		width: 1700px;
+    	min-height: 673px;
+
+	}
+`;
+
+
+export const  SubSectionImage = styled.div`
+	width: 250px;
+	margin: 0 auto;
+	margin-top: 3rem;
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+	}
 `;
 
 export const Image = styled.img`
-	width: 100%;
-	max-width: 31.25rem;
+	width: 600px;
+	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
 	margin-bottom: 20px;
+
+	
 `;
 
 export const Text = styled.p`
-	font-size: 1rem;
+	font-size: 1.12rem;
 	color: #333;
 	line-height: 1.6;
 	text-align: left;
+	margin-bottom: 20px;
 `;
 
 export const SliderText = styled.p`
-	font-size: 1rem;
+	font-size: 1.32rem;
 	color: #fff;
 	line-height: 1.6;
 	text-align: center;
@@ -68,6 +105,12 @@ export const Highlight = styled.span`
 export const SliderContainer = styled.div`
 	background-color: #f37021;
 	width: 100%;
+
+
+	@media screen and (min-width: 768px) {
+		margin-top: 4rem;
+		height: 350px;
+	}
 `;
 
 export const VisionSection = styled.div`
@@ -81,7 +124,7 @@ export const VisionSection = styled.div`
 `;
 
 export const VisionTitle = styled.h2`
-	font-size: 2rem;
+	font-size: 2.82rem;
 	margin-bottom: 20px;
 `;
 
@@ -108,10 +151,12 @@ export const StatLabel = styled.div`
 `;
 
 export const TextContainer = styled.div`
+	padding: 1.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	gap: 1rem;
 `;
 
 export const OrangeBar = styled.div`
@@ -127,6 +172,7 @@ export const SAPSeal = styled.img`
 	height: auto;
 	margin-top: 1rem;
 	cursor: pointer;
+	padding: 1rem;
 `;
 
 export const VisionContainer = styled.div`
@@ -152,9 +198,17 @@ export const VideoContainer = styled.div`
 `;
 
 export const Video = styled.video`
-	width: 40%;
-	max-width: 1200px;
+	
 	height: auto;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	@media screen and (min-width: 768px) {
+		width: 40%;
+	    max-width: 1200px;
+	}
+	
+	@media screen and (min-width: 1024px) {
+		width: 64%;
+	}
 `;

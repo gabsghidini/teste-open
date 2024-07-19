@@ -6,16 +6,25 @@ export const FooterContainer = styled.footer`
 	display: flex;
 	justify-content: center;
 	background-color: #002940;
+	margin-top: 3rem;
+	
 `;
 
 export const Container = styled.div`
 	display: flex;
-	flex-wrap: nowrap;
-	max-width: 1200px;
+	flex-direction: column;
+	max-width: 75rem;
 	height: 25rem;
 	border-radius: 0.5rem;
 	padding: 1rem 0;
 	margin: 0;
+	height: auto;
+
+	@media screen and (min-width: 768px) {
+		
+		flex-direction: row;
+	}
+
 `;
 
 export const FooterColumn = styled.div`
@@ -31,9 +40,13 @@ export const FooterColumnLeft = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	padding: 1rem;
+	padding: 1rem 0.3rem;
 	flex: 1;
 	gap: 1rem;
+
+	@media (min-width: 418px) {
+		padding: 1rem;
+	}
 
 	@media screen and (max-width: 768px) {
 		align-items: center;
@@ -96,12 +109,12 @@ export const ColumnHeader = styled.h6`
 
 export const Text = styled.p`
 	color: white;
-	font-size: 1rem;
+	font-size: 1.12rem;
 	text-align: center;
 	font-weight: 500;
-
-	@media screen and (max-width: 768px) {
-		font-size: 0.75rem;
+	
+@media screen and (min-width: 768px) {
+		font-size: 1rem;
 	}
 `;
 

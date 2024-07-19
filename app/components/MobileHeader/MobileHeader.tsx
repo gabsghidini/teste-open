@@ -24,7 +24,9 @@ const MobileHeader = () => {
 				<S.MobileDropdown>
 					<button onClick={handleOpen}>X</button>
 					<S.MobileDropdownList>
-						<S.MobileDropdownItem onClick={() => router.push("/")}>
+						<S.MobileDropdownItem
+							onClick={() => router.push("/")}
+						>
 							{i18n("home")}
 						</S.MobileDropdownItem>
 						<S.MobileDropdownItem
@@ -32,7 +34,7 @@ const MobileHeader = () => {
 						>
 							{i18n("aboutUs")}
 						</S.MobileDropdownItem>
-						<S.MobileDropdownItem
+						<S.MobileDropdownItem 
 							onClick={() => router.push("/solutions")}
 						>
 							{i18n("solutions")}
@@ -49,22 +51,24 @@ const MobileHeader = () => {
 						</S.MobileDropdownItem>
 						<S.MobileDropdownItem>
 							<S.FlagContainer>
-								<Link
-									href="https://www.instagram.com/opensolutions.sistema/"
-									target="_blank"
-								>
-									<S.Instagram />
-								</Link>
-								<Link
-									href="https://www.linkedin.com/company/open-solutions-br/"
-									target="_blank"
-								>
-									<S.LinkedIn />
-								</Link>
+								<S.SocialMediaContainer>
+									<Link
+										href="https://www.instagram.com/opensolutions.sistema/"
+										target="_blank"
+									>
+										<S.Instagram />
+									</Link>
+									<Link
+										href="https://www.linkedin.com/company/open-solutions-br/"
+										target="_blank"
+									>
+										<S.LinkedIn />
+									</Link>
+								</S.SocialMediaContainer>
 								<Link href={pathname} locale="pt-br">
 									<S.Flag
 										src="/icons/br.png"
-										alt="Bandeira do Brasil"
+										alt="Bandeira do Brasil" 
 									/>
 								</Link>
 								<Link href={pathname} locale="en">
@@ -74,8 +78,8 @@ const MobileHeader = () => {
 									/>
 								</Link>
 								<Link href={pathname} locale="es">
-									<S.Flag
-										src="/icons/es.png"
+									<S.Flag 
+										src="/icons/es.png" 
 										alt="Bandeira da Espanha"
 									/>
 								</Link>

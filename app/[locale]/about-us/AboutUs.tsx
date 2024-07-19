@@ -23,25 +23,31 @@ const About = () => {
 			"_blank"
 		);
 	};
+    const renderDescription = (description: string) => {
+        const parts = description.split(/(\*\*.*?\*\*)/g); 
 
+        return parts.map((part, index) => {
+            if (part.startsWith("**") && part.endsWith("**")) {
+                return <strong key={index}>{part.slice(2, -2)}</strong>; 
+            }
+            return part; 
+        });
+    };
 	return (
 		<>
-			<Header />
 			<S.MainContainer>
 				<S.Container>
 					<S.Section>
-						<S.Image
-							src="/images/predio.png"
-							alt="Open Solutions Building"
-						/>
+
+						<S.BgImage	/>
 
 						<S.TextContainer>
 							<S.Title>{i18n("aboutUs")}</S.Title>
 							<S.OrangeBar />
-							<S.Text>{i18n("aboutUsDescription")}</S.Text>
+							<S.Text>{renderDescription(i18n("aboutUsDescription"))}</S.Text>
 
-							<S.Text>{i18n("bestSAPSolutions")}</S.Text>
-							<S.Text>{i18n("ourClientsVAR")}</S.Text>
+							<S.Text>{renderDescription(i18n("bestSAPSolutions"))}</S.Text>
+							<S.Text>{renderDescription(i18n("ourClientsVAR"))}</S.Text>
 							<S.Highlight>
 								{i18n("checkOutCertificate")}
 							</S.Highlight>
@@ -90,12 +96,12 @@ const About = () => {
 					</S.Container>
 				</S.SliderContainer>
 
-				<S.SubSection>
+				 <S.SubSectionImage>
 					<S.Image
 						src="/images/Clientes-Open.png"
 						alt="Open Solutions on Tablet"
 					/>
-				</S.SubSection>
+				</S.SubSectionImage>
 				<S.VideoContainer>
 					<S.Video controls autoPlay muted>
 						<source
