@@ -6,6 +6,7 @@ import { BannerSolutions } from "@/app/components/BannerSolutions";
 import { CardProduct } from "@/app/components/Solutions/product";
 import { Footer } from "@/app/components/Footer";
 import { PageNotFound } from "@/app/components/PageNotFound";
+import { useEffect, useState } from "react";
 
 
 interface IParams {
@@ -35,6 +36,13 @@ interface IProducts {
 
 const ProductPage = ({ params }: { params: IParams }) => {
   const t = useTranslations("Products");
+
+  const [isClient, setIsClient] = useState(false);
+
+	useEffect(() => {
+	  setIsClient(true);
+	}, []);
+
   const { product } = params;
   
   const products: IProducts = {
@@ -196,12 +204,15 @@ const ProductPage = ({ params }: { params: IParams }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
-    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000
   };
+
+  if (!isClient) {
+		return null; 
+	  }
 
   if (!productData) {
     return <PageNotFound />;
@@ -213,7 +224,7 @@ const ProductPage = ({ params }: { params: IParams }) => {
       <S.Container>
         <CardProduct productData={productData} />
       </S.Container>
-      <S.SliderContainer>
+       <S.SliderContainer>
         <S.ContainerSlider>
           <Slider {...settings}>
             {productData.image.map((item, index) => (
@@ -222,7 +233,8 @@ const ProductPage = ({ params }: { params: IParams }) => {
             ))}
           </Slider>
         </S.ContainerSlider>
-      </S.SliderContainer>
+      </S.SliderContainer> 
+    
       <Footer />
     </>
   );

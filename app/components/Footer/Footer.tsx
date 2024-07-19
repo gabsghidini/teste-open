@@ -31,17 +31,67 @@ const Footer: React.FC = () => {
 						</S.FlagContainer>
 					</S.FooterColumn>
 					<S.FooterColumnLeft>
-						<S.ColumnHeader>{i18n("solutions")}</S.ColumnHeader>
-						<S.Text>{i18n("productionOrder")}</S.Text>
-						<S.Text>{i18n("pricing")}</S.Text>
-						<S.Text>{i18n("qualityControl")}</S.Text>
-						<S.Text>{i18n("logistics")}</S.Text>
-						<S.Text>{i18n("maintenance")}</S.Text>
-						<S.Text>{i18n("ggf")}</S.Text>
-						<S.Text>{i18n("aps")}</S.Text>
-						<S.Text>{i18n("budget")}</S.Text>
-						<S.Text>{i18n("mes")}</S.Text>
-						<S.Text>{i18n("industry4")}</S.Text>
+						<S.ColumnHeader
+							onClick={() => router.push("/solutions")}
+						>
+							{i18n("solutions")}
+						</S.ColumnHeader>
+						<S.Text
+							onClick={() =>
+								router.push("/solutions/production-order")
+							}
+						>
+							{i18n("productionOrder")}
+						</S.Text>
+						<S.Text
+							onClick={() =>
+								router.push("/solutions/precificacao-1")
+							}
+						>
+							{i18n("pricing")}
+						</S.Text>
+						<S.Text
+							onClick={() =>
+								router.push("/solutions/controle-de-qualidade")
+							}
+						>
+							{i18n("qualityControl")}
+						</S.Text>
+						<S.Text
+							onClick={() => router.push("/solutions/logistica")}
+						>
+							{i18n("logistics")}
+						</S.Text>
+						<S.Text
+							onClick={() =>
+								router.push("/solutions/maintenance")
+							}
+						>
+							{i18n("maintenance")}
+						</S.Text>
+						<S.Text onClick={() => router.push("/solutions/ggf")}>
+							{i18n("ggf")}
+						</S.Text>
+						<S.Text
+							onClick={() => router.push("/solutions/aps-mrp-ii")}
+						>
+							{i18n("aps")}
+						</S.Text>
+						<S.Text
+							onClick={() => router.push("/solutions/budget")}
+						>
+							{i18n("budget")}
+						</S.Text>
+						<S.Text onClick={() => router.push("/solutions/mes")}>
+							{i18n("mes")}
+						</S.Text>
+						<S.Text
+							onClick={() =>
+								router.push("/solutions/industria-4-0")
+							}
+						>
+							{i18n("industry4")}
+						</S.Text>
 					</S.FooterColumnLeft>
 					<S.FooterColumnLeft>
 						<S.ColumnHeader>

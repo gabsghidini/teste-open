@@ -337,7 +337,7 @@ export const ProductContainer = styled.div`
 
 
 export const SliderContainer = styled.div`
-	background-color: #FCFCFF;
+	background-color: #5d9abc;
 	margin: 4rem 0;
 	width: 100%;
 `;

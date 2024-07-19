@@ -44,6 +44,7 @@ export const Logo = styled.img`
 	margin: 0.625rem auto;
 `;
 
+
 export const Description = styled.p`
 	font-size: 1.125rem;
 	font-weight: bold;

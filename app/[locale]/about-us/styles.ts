@@ -202,7 +202,8 @@ export const Video = styled.video`
 	height: auto;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+	width: 70%;
+	
 	@media screen and (min-width: 768px) {
 		width: 40%;
 	    max-width: 1200px;

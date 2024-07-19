@@ -27,7 +27,7 @@ const Carousel = () => {
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-	};
+			};
 
 	const settingsTablet = {
 		dots: false,
@@ -35,6 +35,9 @@ const Carousel = () => {
 		speed: 500,
 		slidesToShow: 2,
 		slidesToScroll: 2,
+		autoplay: true,
+		autoplaySpeed: 2000
+		
 	};
 
 	const settingsDesktop = {
@@ -43,6 +46,8 @@ const Carousel = () => {
 		speed: 500,
 		slidesToShow: 5,
 		slidesToScroll: 3,
+		autoplay: true,
+		autoplaySpeed: 2000
 	};
 
 	const router = useRouter();
@@ -96,7 +101,7 @@ const Carousel = () => {
 							</S.CarouselItem>
 						))}
 					</Slider>}
-				</S.CarouselWrapper>
+				 </S.CarouselWrapper>
 			</S.Container>
 			<S.BlueBar>{i18n("opportunity")}</S.BlueBar>
 			<S.WhiteBar>

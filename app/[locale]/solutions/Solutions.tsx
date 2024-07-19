@@ -14,10 +14,10 @@ const Solutions = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
-		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 2000
 	};
 
 	const imageUrls = [
@@ -105,6 +105,8 @@ const Solutions = () => {
 					<S.Text>{i18n("modulesDescription")}</S.Text>
 				</S.TextContainer>
 			</S.Container>
+			<S.SliderContainer>
+			<S.ContainerSlider>
 			<Slider {...settings}>
 					{imageUrls.map((imageUrl, index) => (
 						<S.CarouselItem key={index}>
@@ -112,7 +114,8 @@ const Solutions = () => {
 						</S.CarouselItem>
 					))}
 				</Slider>
-			
+			    </S.ContainerSlider>
+      </S.SliderContainer> 
 			<S.ProductContainer>
 				<S.BlueButtonLink href="/pdfs/APS MRP.pdf" download>{i18n("aps")}</S.BlueButtonLink>
 				<S.BlueButtonLink href="/pdfs/Budget.pdf" download>{i18n("openBudget")}</S.BlueButtonLink>

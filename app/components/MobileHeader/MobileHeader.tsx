@@ -24,9 +24,7 @@ const MobileHeader = () => {
 				<S.MobileDropdown>
 					<button onClick={handleOpen}>X</button>
 					<S.MobileDropdownList>
-						<S.MobileDropdownItem
-							onClick={() => router.push("/")}
-						>
+						<S.MobileDropdownItem onClick={() => router.push("/")}>
 							{i18n("home")}
 						</S.MobileDropdownItem>
 						<S.MobileDropdownItem
@@ -34,7 +32,7 @@ const MobileHeader = () => {
 						>
 							{i18n("aboutUs")}
 						</S.MobileDropdownItem>
-						<S.MobileDropdownItem 
+						<S.MobileDropdownItem
 							onClick={() => router.push("/solutions")}
 						>
 							{i18n("solutions")}
@@ -64,11 +62,17 @@ const MobileHeader = () => {
 									>
 										<S.LinkedIn />
 									</Link>
+									<Link
+										href="https://www.youtube.com/@opensolutionsbrasil"
+										target="_blank"
+									>
+										<S.Youtube />
+									</Link>
 								</S.SocialMediaContainer>
 								<Link href={pathname} locale="pt-br">
 									<S.Flag
 										src="/icons/br.png"
-										alt="Bandeira do Brasil" 
+										alt="Bandeira do Brasil"
 									/>
 								</Link>
 								<Link href={pathname} locale="en">
@@ -78,8 +82,8 @@ const MobileHeader = () => {
 									/>
 								</Link>
 								<Link href={pathname} locale="es">
-									<S.Flag 
-										src="/icons/es.png" 
+									<S.Flag
+										src="/icons/es.png"
 										alt="Bandeira da Espanha"
 									/>
 								</Link>
