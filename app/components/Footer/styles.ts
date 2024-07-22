@@ -1,5 +1,5 @@
 import { FaWhatsapp } from "react-icons/fa";
-import { IoLogoInstagram, IoLogoLinkedin, IoMdPin } from "react-icons/io";
+import { IoLogoInstagram, IoLogoLinkedin, IoLogoYoutube , IoMdPin } from "react-icons/io";
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
@@ -88,6 +88,19 @@ export const LinkedIn = styled(IoLogoLinkedin)`
 	cursor: pointer;
 	padding: 0.25rem;
 `;
+
+export const Youtube = styled(IoLogoYoutube)`
+	color: white;
+	background-color: var(--blue-500);
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0.25rem;
+
+	@media (min-width: 949px) {
+		font-size: 1.5rem;
+	}
+`;
+
 
 export const FlagContainer = styled.div`
 	display: flex;

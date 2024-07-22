@@ -28,6 +28,12 @@ const Footer: React.FC = () => {
 							>
 								<S.LinkedIn />
 							</Link>
+							<Link
+								href="https://www.youtube.com/@opensolutionsbrasil"
+								target="_blank"
+							>
+								<S.Youtube />
+							</Link>
 						</S.FlagContainer>
 					</S.FooterColumn>
 					<S.FooterColumnLeft>
