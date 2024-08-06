@@ -1,4 +1,4 @@
-
+"use client"
 import { Footer } from "@/app/components/Footer";
 import * as S from "./styles";
 import { useTranslations } from "next-intl";
@@ -38,8 +38,6 @@ const Careers = () => {
 	} = useForm<FormState>({
 		resolver: zodResolver(formCareersSchema),
 	});
-
-	
 
 	const onSubmit = async (data: FormState) => {
 
@@ -108,7 +106,7 @@ const Careers = () => {
 				<S.Title>{i18n("workAtOpen")}</S.Title>
 				<S.Subtitle>{i18n("workAtOpenDescription")}</S.Subtitle>
 				<S.Banner>
-					<S.Image src="/images/careers.jpg" alt="Um escritório" />
+					<S.Image src="/images/careers.webp" alt="Um escritório" />
 				</S.Banner>
 				<S.FormContainer>
 					<S.FormTitle>{i18n("workFormTitle")}</S.FormTitle>

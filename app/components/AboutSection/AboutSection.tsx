@@ -32,7 +32,7 @@ const AboutSection = () => {
 				</S.TextContainer>
 				<S.ImageContainer>
 					<S.Image
-						src="/images/predio.png"
+						src="/images/predio.webp"
 						alt="Imagem do prédio da empresa"
 					/>
 				</S.ImageContainer>

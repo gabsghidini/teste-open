@@ -16,7 +16,7 @@ const MobileHeader = () => {
 	return (
 		<S.MobileNav>
 			<S.Logo
-				src="/images/OPEN-Solutions.png"
+				src="/images/OPEN-Solutions.webp"
 				alt="Logo da Open Solutions"
 			/>
 			<S.MenuHamburger onClick={handleOpen} />
@@ -71,19 +71,19 @@ const MobileHeader = () => {
 								</S.SocialMediaContainer>
 								<Link href={pathname} locale="pt-br">
 									<S.Flag
-										src="/icons/br.png"
+										src="/icons/br.webp"
 										alt="Bandeira do Brasil"
 									/>
 								</Link>
 								<Link href={pathname} locale="en">
 									<S.Flag
-										src="/icons/us.png"
+										src="/icons/us.webp"
 										alt="Bandeira dos Estados Unidos"
 									/>
 								</Link>
 								<Link href={pathname} locale="es">
 									<S.Flag
-										src="/icons/es.png"
+										src="/icons/es.webp"
 										alt="Bandeira da Espanha"
 									/>
 								</Link>

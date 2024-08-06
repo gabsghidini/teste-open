@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 			<S.FooterContainer>
 				<S.Container>
 					<S.FooterColumn>
-						<S.Image src="/images/OPEN-Solutions.png" alt="Logo" />
+						<S.Image src="/images/OPEN-Solutions.webp" alt="Logo" />
 						<S.Subtitle>{i18n("followUs")}</S.Subtitle>
 						<S.FlagContainer>
 							<Link

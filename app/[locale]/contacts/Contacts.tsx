@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useState } from "react";
 import { Footer } from "@/app/components/Footer";
 import * as S from "./styles";

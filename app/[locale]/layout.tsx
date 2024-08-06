@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Global } from "../globals";
-import { notFound } from "next/navigation";
 import { Header } from "../components/Header";
 
 const locales = ["pt-br", "en", "es"];
@@ -28,12 +27,6 @@ export default async function LocaleLayout({
 					content="This is my Next.js app with a custom font."
 				/>
 				<link rel="icon" href="/icons/favicon.ico" sizes="any" />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
-					rel="stylesheet"
-				/>
 				<link
 					rel="stylesheet"
 					type="text/css"

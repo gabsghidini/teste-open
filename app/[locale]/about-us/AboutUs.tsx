@@ -1,3 +1,4 @@
+"use client"
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import Slider from "react-slick";
@@ -53,7 +54,7 @@ const About = () => {
 							</S.Highlight>
 							<S.SAPSeal
 								onClick={handleButtonClick}
-								src="/images/certificate.png"
+								src="/images/certificate.webp"
 								alt="SAP Certification"
 							/>
 						</S.TextContainer>
@@ -98,7 +99,7 @@ const About = () => {
 
 				 <S.SubSectionImage>
 					<S.Image
-						src="/images/Clientes-Open.png"
+						src="/images/Clientes-Open.webp"
 						alt="Open Solutions on Tablet"
 					/>
 				</S.SubSectionImage>

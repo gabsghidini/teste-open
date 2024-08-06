@@ -1,4 +1,5 @@
 
+"use client"
 import Slider from "react-slick";
 import { useTranslations } from "next-intl";
 import * as S from "../styles";

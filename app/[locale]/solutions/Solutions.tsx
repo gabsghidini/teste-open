@@ -1,3 +1,4 @@
+"use client"
 import * as S from "./styles";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/navigation";
@@ -21,9 +22,9 @@ const Solutions = () => {
 	};
 
 	const imageUrls = [
-		"/images/Open-Solutions-1-768x445.png",
-		"/images/Open-Solutions-2-768x445.png",
-		"/images/Open-Solutions-3-768x445.png",
+		"/images/Open-Solutions-1-768x445.webp",
+		"/images/Open-Solutions-2-768x445.webp",
+		"/images/Open-Solutions-3-768x445.webp",
 	];
 
 	return (
@@ -80,10 +81,10 @@ const Solutions = () => {
 				</S.Grid>
 				<S.OrangeTitle>{i18n("downloadOurFolder")}</S.OrangeTitle>
 				<S.ImageContainer>
-					<S.Image src="/images/SAP-B1.png" alt="SAP B1" width={271} height={61} />
+					<S.Image src="/images/SAP-B1.webp" alt="SAP B1" width={271} height={61} />
 					<S.ContentDownloadButton>
 						<S.Image
-							src="/images/pdf-150x150.png"
+							src="/images/pdf-150x150.webp"
 							alt="OPEN Manufacturing"
 							width={271} height={61}
 						/>
@@ -97,7 +98,7 @@ const Solutions = () => {
 							{i18n("clickToDownload")}
 						</S.DownloadButton>
 					</S.ContentDownloadButton>
-					<S.Image src="/images/Open-Group.png" alt="Open Group" width={271} height={61} />
+					<S.Image src="/images/Open-Group.webp" alt="Open Group" width={271} height={61} />
 				</S.ImageContainer>
 				<S.Title>{i18n("openModules")}</S.Title>
 				<S.OrangeBar />

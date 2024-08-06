@@ -43,7 +43,7 @@ export const Subtitle = styled.p`
 `;
 
 export const BgImage = styled.div`
-	background-image: url("/images/predio.png");
+	background-image: url("/images/predio.webp");
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
